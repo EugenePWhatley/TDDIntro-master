@@ -5,12 +5,9 @@ public class Factorial {
         Integer fact = 1;
         if (i == 1 || i == 0) {
             return 1;
-        } else if (i == 2) {
-            return 2;
-        } else if (i >= 3) {
-            while (i > 1) {
+        } else if (i >= 2) {
+            for( ; i > 1; i--){
                 fact *= i;
-                i--;
             }
             return fact;
         } else {
