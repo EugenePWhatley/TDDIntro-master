@@ -9,18 +9,18 @@ public class AccountTests {
     @Test
     public void shouldIncreaseMyBalanceWhenIDepositMoney(){
         account = new Account(100);
-        assertThat(account.deposit(50), is((float) 150));
+        assertThat(account.deposit(50), is(150));
     }
 
     @Test
     public void shouldDecreaseMyBalanceWhenIWithdrawMoney(){
         account = new Account(100);
-        assertThat(account.withdraw(50), is((float) 50));
+        assertThat(account.withdraw(50), is(50));
     }
 
     @Test
     public void shouldNotDecreaseMyBalanceWhenIWithdrawMoneyAndDoNotHaveEnoughToCoverTheWithdrawal(){
         account = new Account(50);
-        assertThat(account.withdraw(100),is((float) 50));
+        assertThat(account.withdraw(100),is(50));
     }
 }
